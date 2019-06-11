@@ -10,7 +10,6 @@
     <sprite>sprites\sprite1</sprite>
     <sprite>sprites\bala</sprite>
     <sprite>sprites\sprite3</sprite>
-    <sprite>sprites\thiaguinho_do_pagode</sprite>
   </sprites>
   <backgrounds name="background"/>
   <paths name="paths"/>
