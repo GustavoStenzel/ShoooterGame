@@ -10,6 +10,7 @@
     <sprite>sprites\sprite1</sprite>
     <sprite>sprites\bala</sprite>
     <sprite>sprites\sprite3</sprite>
+    <sprite>sprites\thiago_spr_TESTE___Ta_vendo_isso_</sprite>
   </sprites>
   <backgrounds name="background"/>
   <paths name="paths"/>
