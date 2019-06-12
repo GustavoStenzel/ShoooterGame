@@ -25,18 +25,21 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>xaxis = 0;
-yaxis = 0;
-len = 0;
-dir = 0;
-hspd = 0;
-vspd = 0;
-mv = 3;
-forca_aplicada = 0;
-forca_direcao = 0;
+            <string>// Enums de Estado
+enum Estado
+{
+    seguindo,
+    atingido
+};
 
-hspd_forca = 0;
-vspd_forca = 0;
+// Variaveis de configuração
+friction = 0;
+state = Estado.seguindo;
+defaultSpeed = 3;
+speed = defaultSpeed;
+HP = 10;
+freio = 0.5;
+forcaDeImpacto = 5;
 </string>
           </argument>
         </arguments>
@@ -59,20 +62,17 @@ vspd_forca = 0;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>move_towards_point( char_obj.x, char_obj.y, mv );
-
-dir = point_direction (x , y, char_obj.x,char_obj.y)
-
-if (forca_aplicada &gt;= 0 )
-{
-    hspd_forca = lengthdir_x(forca_aplicada , forca_direcao - 180);
-    vspd_forca = lengthdir_y(forca_aplicada , forca_direcao - 180);
-    
-    forca_aplicada *= .9;
+            <string>if state == Estado.seguindo {
+    var player_dir = point_direction(x, y, char_obj.x, char_obj.y);
+    direction = player_dir;
 }
-hspd = lengthdir_x(len , dir) + hspd_forca;
-vspd = lengthdir_y(len , dir) + vspd_forca;
-
+else if state == Estado.atingido{
+    if speed &lt;= 0 {
+        friction = 0;
+        state = Estado.seguindo;
+        speed = defaultSpeed;
+    }
+}
 </string>
           </argument>
         </arguments>
@@ -95,9 +95,18 @@ vspd = lengthdir_y(len , dir) + vspd_forca;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>audio_play_sound(choose(hitinimigo_sng,hitinimigo2_sng),1,0);
+            <string>friction = freio;
+state = Estado.atingido;
+direction = other.direction;
+speed = forcaDeImpacto;
+
+// Destroy a bala
 instance_destroy(other);
 
+HP -= 1;
+if HP &lt;= 0 {
+    instance_destroy();
+}
 </string>
           </argument>
         </arguments>
