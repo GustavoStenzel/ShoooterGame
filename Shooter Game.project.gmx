@@ -7,7 +7,7 @@
   <sounds name="sound"/>
   <sprites name="sprites">
     <sprite>sprites\parado_spr</sprite>
-    <sprite>sprites\sprite1</sprite>
+    <sprite>sprites\pistola_spr</sprite>
     <sprite>sprites\bala</sprite>
     <sprite>sprites\sprite3</sprite>
     <sprite>sprites\andando_spr</sprite>

@@ -26,6 +26,13 @@
           <argument>
             <kind>1</kind>
             <string>move_towards_point( char_obj.x, char_obj.y, 3 );
+encostar = place_meeting (x , y , bala_obj);
+
+if encostar
+{
+  instance_destroy(other)
+}
+
 </string>
           </argument>
         </arguments>

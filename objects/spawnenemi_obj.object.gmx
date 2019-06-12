@@ -25,9 +25,11 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>spawnspeed = 50;
+            <string>spawnspeed = 1;
 intervalo = spawnspeed * room_speed;
 alarm[0] = intervalo;
+
+
 </string>
           </argument>
         </arguments>
@@ -51,12 +53,25 @@ alarm[0] = intervalo;
           <argument>
             <kind>1</kind>
             <string>alarm[0] = intervalo;
+
+  var distancia_de_spawn = 100;
+var x1 = irandom_range(0, distancia_de_spawn);
+var x2 = irandom_range(room_width - distancia_de_spawn, room_width);
+var posicao_horizontal = choose(x1, x2);
+
+var y1 = irandom_range (0, distancia_de_spawn);
+var y2 = irandom_range(room_height - distancia_de_spawn, room_height);
+var posicao_vertical = choose (y1, y2);
+
+instance_create(posicao_horizontal, posicao_vertical, inimigo_obj);
+
+alarm[0] = intervalo;
 </string>
           </argument>
         </arguments>
       </action>
     </event>
-    <event eventtype="3" enumb="0">
+    <event eventtype="8" enumb="64">
       <action>
         <libid>1</libid>
         <id>603</id>
@@ -73,17 +88,7 @@ alarm[0] = intervalo;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string> var distancia_de_spawn = 100;
-var x1 = irandom_range(0, distancia_de_spawn);
-var x2 = irandom_range(room_width - distancia_de_spawn, room_width);
-var posicao_horizontal = choose(x1, x2);
-
-var y1 = irandom_range (0, distancia_de_spawn);
-var y2 = irandom_range(room_height - distancia_de_spawn, room_height);
-var posicao_vertical = choose (y1, y2);
-
-inimigos_vivos = instance_create(posicao_horizontal, posicao_vertical, inimigo_obj);
-
+            <string>draw_text(x, y, "Vivos:" + string(instance_number(inimigo_obj)) + ".");
 </string>
           </argument>
         </arguments>
