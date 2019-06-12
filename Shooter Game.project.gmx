@@ -5,6 +5,8 @@
   </Configs>
   <NewExtensions/>
   <sounds name="sound">
+    <sound>sound\Tiro_sng</sound>
+    <sound>sound\Tiro2_sng</sound>
     <sound>sound\andar_snd</sound>
   </sounds>
   <sprites name="sprites">

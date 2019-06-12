@@ -57,21 +57,27 @@ var D = keyboard_check(ord("D"));
 
 if A //Movimento WASD
 {
-    x -= mv; // Mv = Movespeed
-    
+    x -= mv;// Mv = Movespeed
+        sprite_index = andando_spr;
 }
-if D
+
+
+else if D
 {
     x += mv;
+    sprite_index = andando_spr;
 }
-if W
+
+else if W
 {
     y -= mv;
+    sprite_index = andando_spr;
 }
-if S
+
+else if S
 {
     y += mv;
-    sprite_index = andando_spr ;
+    sprite_index = andando_spr;
 }
 else
 {

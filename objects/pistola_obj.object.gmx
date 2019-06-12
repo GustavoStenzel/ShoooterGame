@@ -83,13 +83,14 @@ else
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if click
+            <string>if click 
 {
     var tiro = instance_create(pistola_obj.x,pistola_obj.y,bala_obj);
     
     tiro.direction = image_angle;
     tiro.image_angle = image_angle;
     tiro.speed = velocidadetiro;
+    audio_play_sound(choose(Tiro2_sng,Tiro_sng),1,0);
 }
 
   
