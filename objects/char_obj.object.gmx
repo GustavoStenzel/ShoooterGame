@@ -26,6 +26,7 @@
           <argument>
             <kind>1</kind>
             <string>mv = 5;
+
 </string>
           </argument>
         </arguments>
@@ -57,6 +58,7 @@ var D = keyboard_check(ord("D"));
 if A //Movimento WASD
 {
     x -= mv; // Mv = Movespeed
+    
 }
 if D
 {
@@ -76,6 +78,13 @@ else
  sprite_index = parado_spr;
 }
 
+if sprite_index = andando_spr
+{
+    if image_index = 4 or image_index = 0
+    {
+    audio_play_sound(andar_snd,4,0);
+    }
+}
 
 </string>
           </argument>
