@@ -25,7 +25,8 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>forca_batida = 20;
+            <string>
+forca_batida = 20;
 </string>
           </argument>
         </arguments>
@@ -48,10 +49,10 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>
+            <string>with(bala_obj){
 forca_aplicada = other.forca_batida;
 forca_direcao = point_direction(x,y,other.x,other.y);
-
+}
 
 //instance_destroy(other)
 </string>

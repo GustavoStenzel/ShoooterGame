@@ -63,7 +63,7 @@ vspd_forca = 0;
 
 dir = point_direction (x , y, char_obj.x,char_obj.y)
 
-if (forca_aplicada &gt;=0)
+if (forca_aplicada &gt;= 0 )
 {
     hspd_forca = lengthdir_x(forca_aplicada , forca_direcao - 180);
     vspd_forca = lengthdir_y(forca_aplicada , forca_direcao - 180);
@@ -96,7 +96,7 @@ vspd = lengthdir_y(len , dir) + vspd_forca;
           <argument>
             <kind>1</kind>
             <string>audio_play_sound(choose(hitinimigo_sng,hitinimigo2_sng),1,0);
-//instance_destroy(other);
+instance_destroy(other);
 
 </string>
           </argument>
