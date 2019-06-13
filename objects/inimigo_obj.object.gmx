@@ -40,6 +40,7 @@ speed = defaultSpeed;
 HP = 10;
 freio = 0.5;
 forcaDeImpacto = 5;
+dano = 5;
 </string>
           </argument>
         </arguments>
@@ -95,7 +96,8 @@ else if state == Estado.atingido{
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>friction = freio;
+            <string>audio_play_sound(choose(hitinimigo2_sng,hitinimigo_sng),0,0);
+friction = freio;
 state = Estado.atingido;
 direction = other.direction;
 speed = forcaDeImpacto;
@@ -103,7 +105,7 @@ speed = forcaDeImpacto;
 // Destroy a bala
 instance_destroy(other);
 
-HP -= 1;
+HP -= dano;
 if HP &lt;= 0 {
     instance_destroy();
 }

@@ -19,6 +19,7 @@
     <sprite>sprites\andando_spr</sprite>
     <sprite>sprites\sompra_spr</sprite>
     <sprite>sprites\grama_spr</sprite>
+    <sprite>sprites\MENU_spr</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\Areia_bg</background>
@@ -32,9 +33,11 @@
     <object>objects\spawnenemi_obj</object>
     <object>objects\sombra_obj</object>
     <object>objects\grama_obj</object>
+    <object>objects\MENU_obj</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\room0</room>
+    <room>rooms\room1</room>
   </rooms>
   <help>
     <rtf>help.rtf</rtf>

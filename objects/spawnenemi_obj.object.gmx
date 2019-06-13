@@ -25,7 +25,7 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>spawnspeed = 1;
+            <string>spawnspeed = 5;
 intervalo = spawnspeed * room_speed;
 alarm[0] = intervalo;
 
@@ -54,7 +54,7 @@ alarm[0] = intervalo;
             <kind>1</kind>
             <string>alarm[0] = intervalo;
 
-  var distancia_de_spawn = 100;
+  var distancia_de_spawn = -100;
 var x1 = irandom_range(0, distancia_de_spawn);
 var x2 = irandom_range(room_width - distancia_de_spawn, room_width);
 var posicao_horizontal = choose(x1, x2);
