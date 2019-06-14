@@ -25,7 +25,7 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>//audio_play_sound(song_snd, 0 , 1);
+            <string>audio_play_sound(sound5_menu_sng, 0 , 1);
 </string>
           </argument>
         </arguments>
@@ -54,7 +54,7 @@ sprite_index = MENU_spr;
 if keyboard_check(vk_space)
 {
  room_goto_next()
- //audio_stop_sound(song_snd);
+ audio_stop_sound(sound5_menu_sng);
 }
 </string>
           </argument>

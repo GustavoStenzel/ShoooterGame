@@ -25,7 +25,8 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>spawnspeed = 5;
+            <string>quantity = 4;
+spawnspeed = 5;
 intervalo = spawnspeed * room_speed;
 alarm[0] = intervalo;
 
@@ -52,7 +53,11 @@ alarm[0] = intervalo;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>alarm[0] = intervalo;
+            <string>var distancia_de_spawn = -100;
+
+for (i = 0 ; i &lt; quantity ; i++)
+{
+randomize()
 
   var distancia_de_spawn = -100;
 var x1 = irandom_range(0, distancia_de_spawn);
@@ -63,7 +68,8 @@ var y1 = irandom_range (0, distancia_de_spawn);
 var y2 = irandom_range(room_height - distancia_de_spawn, room_height);
 var posicao_vertical = choose (y1, y2);
 
-instance_create(posicao_horizontal, posicao_vertical, inimigo_obj);
+    instance_create(posicao_horizontal, posicao_vertical, inimigo_obj);
+}
 
 alarm[0] = intervalo;
 </string>

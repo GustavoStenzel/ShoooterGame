@@ -10,6 +10,7 @@
     <sound>sound\andar_snd</sound>
     <sound>sound\hitinimigo2_sng</sound>
     <sound>sound\hitinimigo_sng</sound>
+    <sound>sound\sound5_menu_sng</sound>
   </sounds>
   <sprites name="sprites">
     <sprite>sprites\parado_spr</sprite>
@@ -20,6 +21,9 @@
     <sprite>sprites\sompra_spr</sprite>
     <sprite>sprites\grama_spr</sprite>
     <sprite>sprites\MENU_spr</sprite>
+    <sprite>sprites\Hud_spr</sprite>
+    <sprite>sprites\vida_spr</sprite>
+    <sprite>sprites\WolfWalk_spr</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\Areia_bg</background>
