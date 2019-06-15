@@ -11,6 +11,7 @@
     <sound>sound\hitinimigo2_sng</sound>
     <sound>sound\hitinimigo_sng</sound>
     <sound>sound\sound5_menu_sng</sound>
+    <sound>sound\Charhit_sng</sound>
   </sounds>
   <sprites name="sprites">
     <sprite>sprites\parado_spr</sprite>
@@ -24,11 +25,18 @@
     <sprite>sprites\Hud_spr</sprite>
     <sprite>sprites\vida_spr</sprite>
     <sprite>sprites\WolfWalk_spr</sprite>
+    <sprite>sprites\inimigo_spr</sprite>
+    <sprite>sprites\inimiwalk_spr</sprite>
+    <sprite>sprites\MENU2_spr</sprite>
+    <sprite>sprites\hud2_spr</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\Areia_bg</background>
   </backgrounds>
   <paths name="paths"/>
+  <fonts name="fonts">
+    <font>fonts\font0</font>
+  </fonts>
   <objects name="objects">
     <object>objects\char_obj</object>
     <object>objects\pistola_obj</object>
@@ -38,10 +46,13 @@
     <object>objects\sombra_obj</object>
     <object>objects\grama_obj</object>
     <object>objects\MENU_obj</object>
+    <object>objects\hud_obj</object>
+    <object>objects\menu2_obj</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\room0</room>
     <room>rooms\room1</room>
+    <room>rooms\room2</room>
   </rooms>
   <help>
     <rtf>help.rtf</rtf>

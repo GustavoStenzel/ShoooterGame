@@ -25,8 +25,8 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>quantity = 4;
-spawnspeed = 5;
+            <string>quantity = 2;
+spawnspeed = 3;
 intervalo = spawnspeed * room_speed;
 alarm[0] = intervalo;
 
@@ -94,7 +94,7 @@ alarm[0] = intervalo;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>draw_text(x, y, "Vivos:" + string(instance_number(inimigo_obj)) + ".");
+            <string>//draw_text(x, y, "Vivos:" + string(instance_number(inimigo_obj)) + ".");
 </string>
           </argument>
         </arguments>
